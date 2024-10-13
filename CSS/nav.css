@@ -5,6 +5,7 @@
 
 /* Estilo para los botones */
 .btn-info {
+    margin-right: 0.5rem;
     background-color: transparent; /* Sin fondo para el botón de info */
     border-color: black;
 }
@@ -32,10 +33,10 @@
     box-shadow: none;
 }
 
-/* Estilo personalizado de la alerta */
 .alert-personalizada {
     border-radius: 15px;
     margin-top: 3rem;
+
     /* background-color: #80D662; */
-    background-color: rgba(128, 214, 98, 0.90);    
+    background-color: rgba(128, 214, 98, 0.95);    
 }

@@ -20,6 +20,45 @@
     background-color: chocolate;
     ;
 }
+.boton-museos{
+    background-color: rgb(252, 181, 50);
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+.boton-aire-libre{
+    background-color: rgb(50, 195, 252);
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+.boton-clases{
+    background-color: rgb(252, 232, 50);
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+.boton-talleres{
+    background-color: rgb(252, 94, 146);
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+.boton-hasta6{
+    background-color: rgb(94, 157, 252);
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+.boton-mas6{
+    background-color: rgb(252, 157, 94);
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
 
 .boton-museos:hover, .boton-aire-libre:hover, .boton-clases:hover,
 .boton-talleres:hover, .boton-hasta6:hover, .boton-mas6:hover{
@@ -28,4 +67,26 @@
     background-repeat: no-repeat;
     min-height: 3rem;   
     font-weight: 700;
+}
+
+@media (max-width: 576px) {
+    .contenedor-botones {
+        height: 11rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .contenedor-botones {
+        height: 8rem;
+    }
+}
+
+.boton-filtros{
+    background-color: transparent;
+    border: 1px black solid;
+    border-radius: 40px;
+}
+
+.boton-filtros:hover{
+    background-color: rgba(128, 128, 128, 0.336);
 }
