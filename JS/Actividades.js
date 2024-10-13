@@ -9,64 +9,11 @@ function getAllActivities() {
     ];
 }
 
-// Función para filtrar actividades por categoría
-function filterActivitiesByCategory(category) {
-    const allActivities = getAllActivities();
-    return allActivities.filter(activity => activity.category === category);
-}
-
-// // Función para manejar el click en la categoría
-// function filterCategory(category) {
-//     const activityList = document.getElementById("activity-list");
-//     const containerDestacadas = document.querySelector(".container.actividades-destacadas"); // Contenedor de actividades destacadas
-//     const activityContainer = document.querySelector(".container.actividades-filtradas"); // Contenedor de actividades por categoría
-//     const categoryTitle = document.getElementById("filtered-category-title"); // Elemento h2 para el título de la categoría
-    
-//     // Mostrar contenedor de actividades filtradas
-//     activityContainer.style.display = 'block';
-//     // Ocultar actividades destacadas
-//     containerDestacadas.style.display = 'none';
-
-//     // Limpiar la lista de actividades filtradas
-//     activityList.innerHTML = '';
-
-//     // Filtrar actividades por categoría
-//     const filteredActivities = filterActivitiesByCategory(category);
-
-//     // Actualizar el encabezado con el nombre de la categoría
-//     categoryTitle.innerText = category.toUpperCase()
-
-//     if (filteredActivities.length === 0) {
-//         activityList.innerHTML = '<p>No hay actividades en esta categoría.</p>';
-//     } else {
-//         filteredActivities.forEach(activity => {
-//             const activityCard = `
-//                 <div class="col-md-4 mt-2 mb-2">
-//                     <div class="card text-bg-dark">
-//                         <img src="${activity.image}" style="min-height: 18.8rem; max-height:18.8rem; opacity:55%;" class="card-img" alt="${activity.name}">
-//                         <div class="card-img-overlay">
-//                             <h5 class="card-title text-center" style="font-weight: 700;">${activity.name}</h5>
-//                             <p class="card-text" style="font-weight: 600;">Edad recomendada: ${activity.age}</p>
-//                             <p class="card-text" style="font-weight: 600;">Precio: ${activity.price}</p>
-//                             <p class="card-text" style="font-weight: 600;">Ubicación: ${activity.location}</p>
-//                             <p class="card-text" style="font-weight: 600;">Fecha y horario: ${activity.date}</p>
-//                             <p class="card-text" style="font-weight: 600;">Promedio de reseñas: ${calculateAverageRating(activity.reviews)} ★</p>
-//                             <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
-//                         </div>
-//                     </div>
-//                 </div>`;
-//             activityList.innerHTML += activityCard;
-//         });
-//     }
-// }
-
-
 function filterCategory(category) {
     const activityList = document.getElementById("activity-list");
     const containerDestacadas = document.querySelector(".container.actividades-destacadas"); // Contenedor de actividades destacadas
     const activityContainer = document.querySelector(".container.actividades-filtradas"); // Contenedor de actividades por categoría
     const categoryTitle = document.getElementById("filtered-category-title"); // Elemento h2 para el título de la categoría
-    const filterButton = document.querySelector(".boton-filtros"); // Botón de filtros
     
     // Mostrar contenedor de actividades filtradas
     activityContainer.style.display = 'block';
@@ -81,9 +28,6 @@ function filterCategory(category) {
 
     // Actualizar el encabezado con el nombre de la categoría
     categoryTitle.innerText = category.toUpperCase();
-
-    // Mostrar el botón de filtros si hay actividades filtradas
-    filterButton.style.display = filteredActivities.length > 0 ? 'block' : 'none';
 
     if (filteredActivities.length === 0) {
         activityList.innerHTML = '<p>No hay actividades en esta categoría.</p>';
@@ -107,22 +51,6 @@ function filterCategory(category) {
             activityList.innerHTML += activityCard;
         });
     }
-}
-
-// Función para filtrar actividades según la categoría de edad
-function getActivitiesByAge(ageCategory) {
-    const allActivities = getAllActivities(); // Obtener todas las actividades
-
-    return allActivities.filter(activity => {
-        const age = parseInt(activity.age); // Extraer la edad numérica de la cadena
-
-        if (ageCategory === 'up-to-6') {
-            return age < 6; // Filtra actividades hasta 6 años
-        } else if (ageCategory === 'over-6') {
-            return age >= 6; // Filtra actividades mayores de 6 años
-        }
-        return []; // Por defecto, no devuelve ninguna actividad si la categoría es desconocida
-    });
 }
 
 // Función para manejar el click en el filtro de edad
@@ -175,6 +103,28 @@ function filterByAge(ageCategory) {
     }
 }
 
+// Función para filtrar actividades según la categoría de edad
+function getActivitiesByAge(ageCategory) {
+    const allActivities = getAllActivities(); // Obtener todas las actividades
+
+    return allActivities.filter(activity => {
+        const age = parseInt(activity.age); // Extraer la edad numérica de la cadena
+
+        if (ageCategory === 'up-to-6') {
+            return age < 6; // Filtra actividades hasta 6 años
+        } else if (ageCategory === 'over-6') {
+            return age >= 6; // Filtra actividades mayores de 6 años
+        }
+        return []; // Por defecto, no devuelve ninguna actividad si la categoría es desconocida
+    });
+}
+
+// Función para filtrar actividades por categoría
+function filterActivitiesByCategory(category) {
+    const allActivities = getAllActivities();
+    return allActivities.filter(activity => activity.category === category);
+}
+
 function showAllActivities() {
     const activityList = document.getElementById("activity-list");
     const activityContainer = document.querySelector(".container.todas-actividades"); // Contenedor de actividades por categoría
@@ -223,7 +173,10 @@ function showReviews(activityName) {
         title: `Reseñas de ${activityName}`,
         html: `<div>${reviewsText}</div>`,
         icon: 'info',
-        confirmButtonText: 'Cerrar'
+        confirmButtonText: 'Cerrar',
+        customClass: {
+            popup: 'alerta-rev' // Clase CSS personalizada
+        }
     });
 }
 
@@ -334,3 +287,4 @@ function showfilters() {
         width: '600px', // Ajuste de ancho opcional
     });
 }
+

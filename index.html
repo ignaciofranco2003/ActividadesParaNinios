@@ -13,29 +13,27 @@
 </head>
 <body>
 <!-- NAVBAR -->
-    <nav class="navbar navbar-dark p-2 fixed-top">
-        <!-- Botón de toggle -->
-        <button class="navbar-toggler d-flex justify-content-center align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
-            <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 viewBox%3D%270 0 30 30%27%3E%3Cpath stroke%3D%27rgba(0%2C 0%2C 0%2C 1)%27 stroke-width%3D%272%27 stroke-linecap%3D%27round%27 stroke-miterlimit%3D%2710%27 d%3D%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');"></span>
-        </button>
-
-        <!-- Botón de Info -->
-        <button class="btn btn-info d-flex align-items-center justify-content-center p-2 rounded-circle" type="button" style="width: 40px; height: 40px;" onclick="mostrarAlerta()">
-            <i class="fas fa-info"></i>
-        </button>
-
-        <!-- Contenido de la navbar colapsable -->
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="todasLasCategorias.html">Todas las actividades</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="calendarioActividades.html">Ver calendario de eventos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-dark p-2 fixed-top">
+    <button class="navbar-toggler d-flex justify-content-center align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+        <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 viewBox%3D%270 0 30 30%27%3E%3Cpath stroke%3D%27rgba(0%2C 0%2C 0%2C 1)%27 stroke-width%3D%272%27 stroke-linecap%3D%27round%27 stroke-miterlimit%3D%2710%27 d%3D%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');"></span>
+    </button>
+    <button class="btn btn-info d-flex align-items-center justify-content-center p-2 rounded-circle" type="button" style="width: 40px; height: 40px;" onclick="mostrarAlerta()">
+        <i class="fas fa-info"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link ms-2" style="font-weight: 500;" href="paginaPrincipal.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ms-2" style="font-weight: 500;" href="todasLasCategorias.html">Todas las actividades</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ms-2" style="font-weight: 500;" href="calendarioActividades.html">Ver calendario de eventos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <!-- NAVBAR -->
 
     <div class="container mt-5 pt-5 d-flex flex-column align-items-center">

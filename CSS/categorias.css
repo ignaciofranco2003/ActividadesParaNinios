@@ -90,3 +90,7 @@
 .boton-filtros:hover{
     background-color: rgba(128, 128, 128, 0.336);
 }
+
+.alerta-rev{
+    background-color: #80D662fc;
+}
