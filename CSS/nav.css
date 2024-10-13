@@ -14,7 +14,7 @@
 }
 
 .nav-link:hover {
-    background-color:rgb(0,0,0, 25);
+    background-color:rgb(15,25,15, 25);
     color:white ;
 }
 
@@ -37,5 +37,5 @@
     border-radius: 15px;
     margin-top: 3rem;
     /* background-color: #80D662; */
-    background-color: rgba(128, 214, 98, 0.80);    
+    background-color: rgba(128, 214, 98, 0.90);    
 }

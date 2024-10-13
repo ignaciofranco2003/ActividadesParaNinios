@@ -1,3 +1,31 @@
-/* .contenedor-botones {
-    margin-top: 10rem;
-} */
+.boton-museos:hover{
+    background-image: url(IMG/Botones/museos.jpg);
+}
+
+.boton-aire-libre:hover{
+    background-image: url(IMG/Botones/aire-libre.jpg);
+}
+.boton-clases:hover{
+    background-image: url(IMG/Botones/clases.jpg);
+}
+.boton-talleres:hover{
+    background-image: url(IMG/Botones/Talleres-infantiles.jpg);
+}
+
+.boton-hasta6:hover{
+    background-color: steelblue;
+}
+
+.boton-mas6:hover{
+    background-color: chocolate;
+    ;
+}
+
+.boton-museos:hover, .boton-aire-libre:hover, .boton-clases:hover,
+.boton-talleres:hover, .boton-hasta6:hover, .boton-mas6:hover{
+    position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 3rem;   
+    font-weight: 700;
+}

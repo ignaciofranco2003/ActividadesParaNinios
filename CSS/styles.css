@@ -1,0 +1,5 @@
+body {
+    background-image: url(IMG/FONDOPRUEBA3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+}
