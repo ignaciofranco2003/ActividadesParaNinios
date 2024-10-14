@@ -9,16 +9,13 @@
             { time: "14:00hs a 16:00hs", name: "Taller de arte" }
         ],
         11: [
-            {time: "9:00hs a 23:00hs", name: "Ferias paseo pulico municipal" }
+            {time: "9:00hs a 23:00hs", name: "Ferias paseo publico municipal" }
         ],
         12: [
-            { time: "9:00hs a 23:00hs", name: "Ferias paseo pulico municipal" }
+            { time: "9:00hs a 23:00hs", name: "Ferias paseo publico municipal" }
         ],
         13: [
-            {time: "9:00hs a 23:00hs", name: "Ferias paseo pulico municipal" }
-        ],
-        20: [
-            { time: "03:00 PM", name: "Actividad 6" }
+            {time: "9:00hs a 23:00hs", name: "Ferias paseo publico municipal" }
         ],
     };
 

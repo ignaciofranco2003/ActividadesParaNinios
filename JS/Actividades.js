@@ -34,7 +34,7 @@ function filterCategory(category) {
     } else {
         filteredActivities.forEach(activity => {
             const activityCard = `
-                <div class="col-md-4 mt-2 mb-2">
+                <div class="col-md-6 col-lg-4 mt-2 mb-2">
                     <div class="card text-bg-dark">
                         <img src="${activity.image}" style="min-height: 18.8rem; max-height:18.8rem; opacity:55%;" class="card-img" alt="${activity.name}">
                         <div class="card-img-overlay">
@@ -44,7 +44,9 @@ function filterCategory(category) {
                             <p class="card-text" style="font-weight: 600;">Ubicación: ${activity.location}</p>
                             <p class="card-text" style="font-weight: 600;">Fecha y horario: ${activity.date}</p>
                             <p class="card-text" style="font-weight: 600;">Promedio de reseñas: ${calculateAverageRating(activity.reviews)} ★</p>
-                            <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                            <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);">
+                                <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                            </div>
                         </div>
                     </div>
                 </div>`;
@@ -84,7 +86,7 @@ function filterByAge(ageCategory) {
     } else {
         filteredActivities.forEach(activity => {
             const activityCard = `
-                <div class="col-md-4 mt-2 mb-2">
+                <div class="col-md-6 col-lg-4 mt-2 mb-2">
                     <div class="card text-bg-dark">
                         <img src="${activity.image}" style="min-height: 18.8rem; max-height:18.8rem; opacity:55%;" class="card-img" alt="${activity.name}">
                         <div class="card-img-overlay">
@@ -94,7 +96,9 @@ function filterByAge(ageCategory) {
                             <p class="card-text" style="font-weight: 600;">Ubicación: ${activity.location}</p>
                             <p class="card-text" style="font-weight: 600;">Fecha y horario: ${activity.date}</p>
                             <p class="card-text" style="font-weight: 600;">Promedio de reseñas: ${calculateAverageRating(activity.reviews)} ★</p>
-                            <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                            <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);">
+                                <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                            </div>
                         </div>
                     </div>
                 </div>`;
@@ -145,7 +149,7 @@ function showAllActivities() {
     // Mostrar todas las actividades
     allActivities.forEach(activity => {
         const activityCard = `
-            <div class="col-md-4 mt-2 mb-2">
+            <div class="col-md-6 col-lg-4 mt-2 mb-2">
                 <div class="card text-bg-dark">
                     <img src="${activity.image}" style="min-height: 18.8rem; max-height:18.8rem; opacity:55%;" class="card-img" alt="${activity.name}">
                     <div class="card-img-overlay">
@@ -155,7 +159,9 @@ function showAllActivities() {
                         <p class="card-text" style="font-weight: 600;">Ubicación: ${activity.location}</p>
                         <p class="card-text" style="font-weight: 600;">Fecha y horario: ${activity.date}</p>
                         <p class="card-text" style="font-weight: 600;">Promedio de reseñas: ${calculateAverageRating(activity.reviews)} ★</p>
-                        <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                        <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);">
+                            <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                        </div>
                     </div>
                 </div>
             </div>`;
