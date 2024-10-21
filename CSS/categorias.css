@@ -40,7 +40,7 @@
 }
 
 .boton-talleres{
-    background-color: rgb(252, 94, 146);
+    background-color: rgb(252, 94, 133);
     border: transparent;
     color: black;
     font-weight: 500;
@@ -91,6 +91,11 @@
     background-color: rgba(128, 128, 128, 0.336);
 }
 
+.alerta-filtros{
+    color: black;
+}
+
 .alerta-rev{
     background-color: #80D662fc;
+    color: black;
 }

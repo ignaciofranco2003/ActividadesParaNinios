@@ -1,6 +1,5 @@
-.navbar {
-    background-color: #80D662; /* Color de la barra de navegación */
-    opacity: 80%;
+.custom-navbar {
+    background-color: #80d661cc;
 }
 
 /* Estilo para los botones */
@@ -11,11 +10,11 @@
 }
 
 .nav-link {
-    color: black; /* Color de los enlaces en la navbar */
+    color: black;
 }
 
 .nav-link:hover {
-    background-color:rgb(15,25,15, 25);
+    background-color: rgba(0, 0, 0, 0.65);
     color:white ;
 }
 
@@ -36,6 +35,6 @@
 .alert-personalizada {
     border-radius: 15px;
     margin-top: 3rem;
-    /* background-color: #80D662; */
-    background-color: rgba(128, 214, 98, 0.95);    
+    color: black;
+    background-color: #80d661e6;    
 }

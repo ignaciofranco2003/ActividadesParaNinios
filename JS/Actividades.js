@@ -5,6 +5,7 @@ function getAllActivities() {
         { name: "Clases de Natación", age: "3+ años", price: "$2500", location: "Pileta Municipal", date: "LUN - MIE - VIE 15hs a 16 hs", category: "Clases", image: "CSS/IMG/clases-natacion.jpeg", reviews: [{ text: "Profesores muy amables", rating: 4 }, { text: "Buen ambiente", rating: 3 }] },
         { name: "Taller de Manualidades", age: "4+ años", price: "$3000", location: "Escuela tecnica N2", date: "MAR Y JUE 15hs a 17HS", category: "Talleres", image: "CSS/IMG/manualidades.jpg", reviews: [{ text: "Muy divertido", rating: 5 }] },
         { name: "Paseo por la costanera", age: "3+ años", price: "Gratis", location: "Paseo publico municipal", date: "-", category: "Aire libre", image: "CSS/IMG/paseo-bicicleta.jpg", reviews: [{ text: "Excelente recorrido", rating: 5 }] },
+        { name: "Paseo por la costanera", age: "3+ años", price: "Gratis", location: "Paseo publico municipal", date: "-", category: "Aire libre", image: "CSS/IMG/paseo-bicicleta.jpg", reviews: [{ text: "Excelente recorrido", rating: 5 }] },
         { name: "Clases de Pintura", age: "7+ años", price: "$1500", location: "Escuela de Arte", date: "LUN Y VIE 16hs a 17hs", category: "Clases", image: "CSS/IMG/pinturas.jpg", reviews: [{ text: "Ideal para artistas en crecimiento", rating: 4 }] }
     ];
 }
@@ -34,7 +35,7 @@ function filterCategory(category) {
     } else {
         filteredActivities.forEach(activity => {
             const activityCard = `
-                <div class="col-md-6 col-lg-4 mt-2 mb-2">
+                <div class="col-md-6 col-lg-4 mt-2 mb-4">
                     <div class="card text-bg-dark">
                         <img src="${activity.image}" style="min-height: 18.8rem; max-height:18.8rem; opacity:55%;" class="card-img" alt="${activity.name}">
                         <div class="card-img-overlay">
@@ -86,7 +87,7 @@ function filterByAge(ageCategory) {
     } else {
         filteredActivities.forEach(activity => {
             const activityCard = `
-                <div class="col-md-6 col-lg-4 mt-2 mb-2">
+                <div class="col-md-6 col-lg-4 mt-2 mb-4">
                     <div class="card text-bg-dark">
                         <img src="${activity.image}" style="min-height: 18.8rem; max-height:18.8rem; opacity:55%;" class="card-img" alt="${activity.name}">
                         <div class="card-img-overlay">
@@ -206,8 +207,8 @@ function showfilters() {
     Swal.fire({
         html: `
         <div class="position-relative">
-            <a class="text-center" href="#" style="font-size: 24px; text-decoration: none; color: #333; opacity:95%; font-weight: 500;">FILTROS</a>
-            <button type="button" onclick="Swal.close()" style="background: transparent; border: none; position: absolute; top: 0px; right: 0px; opacity: 65%; font-size: 30px;">&times;</button>
+            <a class="text-center" href="#" style="font-size: 24px; text-decoration: none; color: #333; opacity:95%; font-weight: 500; color:black;">FILTROS</a>
+            <button type="button" onclick="Swal.close()" style="background: transparent; border: none; position: absolute; top: 0px; right: 0px; opacity: 95%; font-size: 30px; color:black;">&times;</button>
             <div class="container mt-4">
                 <!-- Filtro de Categorías -->
                 <div class="mb-3">
@@ -291,6 +292,9 @@ function showfilters() {
         showConfirmButton: false, // Oculta el botón de confirmación por defecto
         background: '#80d661fa', // Color de fondo
         width: '600px', // Ajuste de ancho opcional
+        customClass: {
+            popup: 'alerta-filtros' // Clase CSS personalizada
+        }
     });
 }
 
