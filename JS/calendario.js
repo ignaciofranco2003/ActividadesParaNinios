@@ -28,10 +28,11 @@
         Swal.fire({
             title: `Actividades para el día ${day}`,
             html: activityList,
-            icon: 'info',
+            icon: 'warning',
             confirmButtonText: 'Cerrar',
             customClass: {
-            popup: 'alerta-calendario' // Clase CSS personalizada
+            popup: 'alerta-calendario',
+            confirmButton: 'cerrar-calen'
         }
         });
     }

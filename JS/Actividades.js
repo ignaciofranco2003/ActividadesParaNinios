@@ -182,7 +182,8 @@ function showReviews(activityName) {
         icon: 'info',
         confirmButtonText: 'Cerrar',
         customClass: {
-            popup: 'alerta-rev' // Clase CSS personalizada
+            popup: 'alerta-rev',
+            confirmButton: 'btn-cerrar-rev'
         }
     });
 }
@@ -207,8 +208,8 @@ function showfilters() {
     Swal.fire({
         html: `
         <div class="position-relative">
-            <a class="text-center" href="#" style="font-size: 24px; text-decoration: none; color: #333; opacity:95%; font-weight: 500; color:black;">FILTROS</a>
-            <button type="button" onclick="Swal.close()" style="background: transparent; border: none; position: absolute; top: 0px; right: 0px; opacity: 95%; font-size: 30px; color:black;">&times;</button>
+            <a class="text-center" href="#" style="font-size: 24px; text-decoration: none;  opacity:95%; font-weight: 500; color:black;">FILTROS</a>
+            <button type="button" onclick="Swal.close()" style="background: transparent; border: none; position: absolute; top: 0px; right: 0px; opacity: 100%; font-size: 30px; color:black;">&times;</button>
             <div class="container mt-4">
                 <!-- Filtro de Categorías -->
                 <div class="mb-3">
@@ -285,15 +286,14 @@ function showfilters() {
 
                 <!-- Botón para aplicar los filtros -->
                 <div class="text-center">
-                    <button class="btn btn-primary" onclick="Swal.close()">Aplicar Filtros</button>
+                    <button class="btn btn-filtros" onclick="Swal.close()">Aplicar Filtros</button>
                 </div>
             </div>
         </div>`,
         showConfirmButton: false, // Oculta el botón de confirmación por defecto
-        background: '#80d661fa', // Color de fondo
         width: '600px', // Ajuste de ancho opcional
         customClass: {
-            popup: 'alerta-filtros' // Clase CSS personalizada
+            popup: 'alerta-filtros'
         }
     });
 }

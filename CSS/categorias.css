@@ -91,11 +91,34 @@
     background-color: rgba(128, 128, 128, 0.336);
 }
 
-.alerta-filtros{
-    color: black;
-}
 
 .alerta-rev{
-    background-color: #80D662fc;
+    /* background-color: rgb(175, 157, 209); */
+    background-color: #aa8bf1;
     color: black;
+    border-radius: 15px;
+}
+
+.btn-cerrar-rev{
+    background-color: rgb(216, 32, 32);
+}
+
+.btn-cerrar-rev:hover{
+    background-color: rgb(184, 8, 8);
+}
+
+.alerta-filtros{
+    background-color: #a09fee;
+    color: black;
+    border: 15px;
+}
+
+.btn-filtros{
+    background-color: rgb(24, 136, 24);
+    color: white;
+}
+
+.btn-filtros:hover{
+    background-color: rgb(35, 167, 53);
+    color: white;
 }
