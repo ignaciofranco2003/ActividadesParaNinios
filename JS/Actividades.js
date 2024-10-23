@@ -1,12 +1,12 @@
 // Función para obtener todas las actividades
 function getAllActivities() {
     return [
-        { name: "Visita al Museo paleontológico", age: "6+ años", price: "Gratis", location: "Centro de la ciudad", date: "LUN A VIE 10hs a 19hs", category: "Museos", image: "CSS/IMG/museo-paleontologico.jpeg", reviews: [{ text: "Muy educativo", rating: 5 }, { text: "Ideal para niños curiosos", rating: 4 }] },
-        { name: "Clases de Natación", age: "3+ años", price: "$2500", location: "Pileta Municipal", date: "LUN - MIE - VIE 15hs a 16 hs", category: "Clases", image: "CSS/IMG/clases-natacion.jpeg", reviews: [{ text: "Profesores muy amables", rating: 4 }, { text: "Buen ambiente", rating: 3 }] },
-        { name: "Taller de Manualidades", age: "4+ años", price: "$3000", location: "Escuela tecnica N2", date: "MAR Y JUE 15hs a 17HS", category: "Talleres", image: "CSS/IMG/manualidades.jpg", reviews: [{ text: "Muy divertido", rating: 5 }] },
-        { name: "Paseo por la costanera", age: "3+ años", price: "Gratis", location: "Paseo publico municipal", date: "-", category: "Aire libre", image: "CSS/IMG/paseo-bicicleta.jpg", reviews: [{ text: "Excelente recorrido", rating: 5 }] },
-        { name: "Paseo por la costanera", age: "3+ años", price: "Gratis", location: "Paseo publico municipal", date: "-", category: "Aire libre", image: "CSS/IMG/paseo-bicicleta.jpg", reviews: [{ text: "Excelente recorrido", rating: 5 }] },
-        { name: "Clases de Pintura", age: "7+ años", price: "$1500", location: "Escuela de Arte", date: "LUN Y VIE 16hs a 17hs", category: "Clases", image: "CSS/IMG/pinturas.jpg", reviews: [{ text: "Ideal para artistas en crecimiento", rating: 4 }] }
+        { name: "Visita al Museo paleontológico", description: "Una oportunidad para los niños de explorar el fascinante mundo de los dinosaurios y otros fósiles en este museo educativo y entretenido.", age: "6+ años", price: "Gratis", location: "Centro de la ciudad", date: "LUN A VIE 10hs a 19hs", category: "Museos", image: "CSS/IMG/museo-paleontologico.jpeg", reviews: [{ text: "Muy educativo", rating: 5 }, { text: "Ideal para niños curiosos", rating: 4 }] },
+        { name: "Clases de Natación", description: "Clases ideales para que los niños desarrollen sus habilidades en el agua, supervisados por profesores experimentados en un ambiente seguro y acogedor.", age: "3+ años", price: "$2500", location: "Pileta Municipal", date: "LUN - MIE - VIE 15hs a 16 hs", category: "Clases", image: "CSS/IMG/clases-natacion.jpeg", reviews: [{ text: "Profesores muy amables", rating: 4 }, { text: "Buen ambiente", rating: 3 }] },
+        { name: "Taller de Manualidades", description: "Taller creativo para niños donde pueden dejar volar su imaginación mientras aprenden a crear divertidas manualidades.", age: "4+ años", price: "$3000", location: "Escuela tecnica N2", date: "MAR Y JUE 15hs a 17HS", category: "Talleres", image: "CSS/IMG/manualidades.jpg", reviews: [{ text: "Muy divertido", rating: 5 }] },
+        { name: "Paseo por la costanera", description: "Un agradable recorrido al aire libre por la costanera municipal, perfecto para disfrutar en familia y conectarse con la naturaleza.",age: "3+ años", price: "Gratis", location: "Paseo publico municipal", date: "-", category: "Aire libre", image: "CSS/IMG/paseo-bicicleta.jpg", reviews: [{ text: "Excelente recorrido", rating: 5 }] },
+        { name: "Paseo por la costanera", description: "Un agradable recorrido al aire libre por la costanera municipal, perfecto para disfrutar en familia y conectarse con la naturaleza.", age: "3+ años", price: "Gratis", location: "Paseo publico municipal", date: "-", category: "Aire libre", image: "CSS/IMG/paseo-bicicleta.jpg", reviews: [{ text: "Excelente recorrido", rating: 5 }] },
+        { name: "Clases de Pintura", description: "Clases donde los pequeños artistas pueden explorar diferentes técnicas de pintura y desarrollar su creatividad en un entorno estimulante.", age: "7+ años", price: "$1500", location: "Escuela de Arte", date: "LUN Y VIE 16hs a 17hs", category: "Clases", image: "CSS/IMG/pinturas.jpg", reviews: [{ text: "Ideal para artistas en crecimiento", rating: 4 }] }
     ];
 }
 
@@ -46,7 +46,7 @@ function filterCategory(category) {
                             <p class="card-text" style="font-weight: 600;">Fecha y horario: ${activity.date}</p>
                             <p class="card-text" style="font-weight: 600;">Promedio de reseñas: ${calculateAverageRating(activity.reviews)} ★</p>
                             <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);">
-                                <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                                <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver detalles</button>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ function filterByAge(ageCategory) {
                             <p class="card-text" style="font-weight: 600;">Fecha y horario: ${activity.date}</p>
                             <p class="card-text" style="font-weight: 600;">Promedio de reseñas: ${calculateAverageRating(activity.reviews)} ★</p>
                             <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);">
-                                <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                                <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver detalles</button>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@ function showAllActivities() {
                         <p class="card-text" style="font-weight: 600;">Fecha y horario: ${activity.date}</p>
                         <p class="card-text" style="font-weight: 600;">Promedio de reseñas: ${calculateAverageRating(activity.reviews)} ★</p>
                         <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);">
-                            <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver Reseñas</button>
+                            <button class="btn btn-primary" onclick="showReviews('${activity.name}')">Ver detalles</button>
                         </div>
                     </div>
                 </div>
@@ -175,11 +175,16 @@ function showReviews(activityName) {
     const allActivities = getAllActivities();
     const activity = allActivities.find(act => act.name === activityName);
     const reviewsText = activity.reviews.map(review => `<p>${review.text} - ${generateStars(review.rating)}</p>`).join('');
-    
+    const description = activity.description;
     Swal.fire({
-        title: `Reseñas de ${activityName}`,
-        html: `<div>${reviewsText}</div>`,
-        icon: 'info',
+        html: `
+            <div style="text-align: center; padding: 20px;">
+                <h2 class="mb-2 border-bottom border-dark border-2" style="font-size: 24px; font-weight:700; ">DESCRIPCION</h2>
+                <p class="" style="font-size: 20px;">${description}</p>
+                <h2 class="mt-5 border-bottom border-dark border-2" style="font-size: 24px; font-weight:700;">Reseñas de ${activityName}</h2>
+                <div class="" style="font-size: 20px;">${reviewsText}</div>
+            </div>
+        `,
         confirmButtonText: 'Cerrar',
         customClass: {
             popup: 'alerta-rev',
